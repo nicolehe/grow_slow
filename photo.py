@@ -19,4 +19,5 @@ os.system ("fswebcam -d/dev/video0 -r1280x960 --no-banner plantpic.jpg")
 
 api = Twython(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_KEY,ACCESS_SECRET)
 photo = open('plantpic.jpg','rb')
-api.update_status_with_media(media=photo)
+image_ids = api.upload_media(media=photo)
+api.update_status(status='', media_ids=image_ids['media_id'])
