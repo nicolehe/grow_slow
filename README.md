@@ -73,7 +73,9 @@ If you haven't already, make a Twitter account for your little plant bot. Then, 
 In Terminal, run these commands to install the Python package we need to tweet, called Twython:
 
 `sudo apt-get install python-setuptools`
+
 `sudo easy_install pip`
+
 `sudo pip install twython`
 
 ##5. Making the Python script
