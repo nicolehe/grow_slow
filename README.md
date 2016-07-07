@@ -60,6 +60,10 @@ With the USB camera plugged in, we can very easily take photos via the command l
 
 `fswebcam test.jpg`
 
+Now, if you click on File Manager, you'll see that in your /home/pi directory, you have a file called test.jpg:
+
+[](images/test.jpg)
+
 
 
 
