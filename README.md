@@ -166,11 +166,11 @@ This sets it to reboot at 10:00 am every morning.
 
 Maybe the hardest part of this whole thing is finding a good place to put your webcam so that it captures your plant properly. You'll probably have to take a bunch of test photos to figure out the ideal position.
 
-But once this is all set up, it's yours to experiment with. You can change the frequency of the photos, or give the photo names a timestamp, or upload each photo onto a server, or tweet words as well as photos, or instead of taking photos of your plant take photos of your piano, or window, or bed, or whatever. There are many ways to build upon this project.
+But once this is all set up, it's yours to experiment with. You can change the frequency of the photos, or give the photo names a timestamp, or upload each photo onto a server, or tweet words as well as photos, or instead of taking photos of your plant take photos of your piano, or window, or bed, or aquarium, or whatever. There are many ways to build upon this project.
 
 Feel free to submit pull-requests to improve this (very simple) script! 
 
-And if you do set up a tweeting plant, please [let me know](mailto:hi@nicole.pizza)! Maybe one day we will have an internet garden.
+And if you do set up a tweeting plant, please [let me know](mailto:hi@nicole.pizza)! Maybe one day we will have an internet garden. :seedling::seedling::seedling:
 
 
 
