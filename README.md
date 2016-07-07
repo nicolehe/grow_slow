@@ -4,7 +4,7 @@ Note: this is in-progress....check back later
 <p align="center">
 ![](http://nicole.pizza/img/grow_slow-11days.gif)
 
-This is a guide to making your own version of [@grow_slow](http://twitter.com/grow_slow), which tweets a photo of a plant once a day. Of course, you can use this to do whatever you want — **these instructions will cover the technical aspects of using a Raspberry Pi to take a photo with a webcam and tweet it once a day**. This is meant to be useful for people who might not have a lot of experience with coding, or with Raspberry Pi. You can read more about [@grow_slow](http://twitter.com/grow_slow) [here](http://nicole.pizza/grow_slow).
+This is a guide to making your own version of [@grow_slow](http://twitter.com/grow_slow), which tweets a photo of a plant once a day. Of course, you can use this to do whatever you want — **these instructions will cover the technical aspects of using a Raspberry Pi to take a photo with a webcam and tweet it once a day**. This is written to be understandable for people who might not have a lot of experience with coding, or with Raspberry Pi. You can read more about [@grow_slow](http://twitter.com/grow_slow) [here](http://nicole.pizza/grow_slow).
 
 ##Things You Need
 
@@ -146,7 +146,7 @@ Hit ctrl + x to save and quit again.
 
 ###Optional but recommended: set a reboot
 
-Sometimes, things can get messed up if your Pi is on forever. Also, some USB cameras have weird compatibility issues that are solved with a simple reboot. I recommend that you add another simple script that reboots your Pi once a day before your script runs so that things are always fresh, as they say.
+Sometimes, things can get messed up if your Pi is just constantly running forever. Also, some USB cameras have weird compatibility issues that are solved with a simple reboot. I recommend that you add another simple script that reboots your Pi once a day before your script runs so that things are always fresh, as they say.
 
 Make a file called reboot.sh:
 
@@ -162,8 +162,15 @@ Hit ctrl + x to save and quit. Now, open up your crontab again with `crontab -e`
 
 This sets it to reboot at 10:00 am every morning.
 
+##7. Position your webcam, and then do whatever you want
 
+Maybe the hardest part of this whole thing is finding a good place to put your webcam so that it captures your plant properly. You'll probably have to take a bunch of test photos to figure out the ideal position.
 
+But once this is all set up, it's yours to experiment with. You can change the frequency of the photos, or give the photo names a timestamp, or upload each photo onto a server, or tweet words as well as photos, or instead of taking photos of your plant take photos of your piano, or window, or bed, or whatever. There are many ways to build upon this project.
+
+Feel free to submit pull-requests to improve this (very simple) script! 
+
+And if you do set up a tweeting plant, please [let me know](mailto:hi@nicole.pizza)! Maybe one day we will have an internet garden.
 
 
 
