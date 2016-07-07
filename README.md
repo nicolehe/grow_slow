@@ -18,6 +18,7 @@ This is a guide to making your own version of [@grow_slow](http://twitter.com/gr
 * HDMI cable^
 
 ^if it's your first time using a Pi, you should use these things, but they're not required
+
 ^^note that this guide is for using a USB webcam - if you are using a Raspberry Pi camera module, the webcam instructions are not covered here
 
 ##1. Setting up your Pi
@@ -80,7 +81,7 @@ sudo pip install twython
 
 ##5. Making the Python script
 
-Now we are going to write the script that will actually run once a day and tweet our photo. It's the one in this repository called [python.py](https://github.com/nicolehe/grow_slow/blob/master/grow_slow.py)
+Now we are going to write the script that will actually run once a day and tweet our photo. It's the one in this repository called [grow_slow.py](https://github.com/nicolehe/grow_slow/blob/master/grow_slow.py)
 
 Probably the easiest way to do that is to copy that script, and paste it into a file on your own Pi. Go to [raw script URL](https://raw.githubusercontent.com/nicolehe/grow_slow/master/grow_slow.py), and copy it.
 
@@ -100,15 +101,75 @@ CONSUMER_SECRET = 'your consumer secret here'
 ACCESS_KEY = 'your access key here'
 ACCESS_SECRET = 'your access secret here'
 ```
-Go find the keys you just generated on Twitter and paste all those things inside the quotes. Hit ctrl + x to save and exit.
+Go find the keys you just generated on Twitter and paste the relevant things inside the quotes. Hit ctrl + x to save and exit.
 
-Now, we should be ready to try to tweet!
+Now, we should be ready to try to tweet! Run:
 
 `python grow_slow.py`
 
 Go to your Twitter account and check — if all went well, it should have tweeted a photo from your webcam.
 
 ##6. Make it cron
+
+Now that we got the Pi to take a photo and tweet it (woohoo!), we want to schedule it so that it runs once a day at the same time. Remember how we set the correct time for our Pi? This is why.
+
+To do this, we'll use something called cron, which is basically a task scheduler. [RaspberryPi.org has some good explanation about how this works](https://www.raspberrypi.org/documentation/linux/usage/cron.md).
+
+Let's open up our crontab:
+
+`crontab -e`
+
+This is the structure of the crontab:
+
+```
+# m h  dom mon dow   command
+# * * * * *  command to execute
+# ┬ ┬ ┬ ┬ ┬
+# │ │ │ │ │
+# │ │ │ │ │
+# │ │ │ │ └───── day of week (0 - 7) (0 to 6 are Sunday to Saturday, or use names; 7 is Sunday, the same as 0)
+# │ │ │ └────────── month (1 - 12)
+# │ │ └─────────────── day of month (1 - 31)
+# │ └──────────────────── hour (0 - 23)
+# └───────────────────────── min (0 - 59)
+```
+
+If you want your plant to tweet at 10:17 am every morning (like what [@grow_slow](http://twitter.com/grow_slow) does), add this line:
+
+`17 10 * * * /home/pi/grow_slow.py`
+
+You can of course change it to whatever you want. If you wanted it to run more than once a day, you could add multiple lines with different times. Or, if you wanted it to run once a week, you could do that as well. It's up to you!
+
+Hit ctrl + x to save and quit again.
+
+(To see if this works, you can try setting it for a time a few minutes from now and then check if it tweeted properly.)
+
+###Optional but recommended: set a reboot
+
+Sometimes, things can get messed up if your Pi is on forever. Also, some USB cameras have weird compatibility issues that are solved with a simple reboot. I recommend that you add another simple script that reboots your Pi once a day before your script runs so that things are always fresh, as they say.
+
+Make a file called reboot.sh:
+
+`nano reboot.sh`
+
+Type this in the file:
+
+`sudo reboot`
+
+Hit ctrl + x to save and quit. Now, open up your crontab again with `crontab -e` and add a line that runs your reboot script once a day:
+
+`0 10 * * * /home/pi/reboot.sh`
+
+This sets it to reboot at 10:00 am every morning.
+
+
+
+
+
+
+
+
+
 
 
 
