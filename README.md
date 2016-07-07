@@ -1,7 +1,6 @@
 #@grow_slow
 <p align="center">
 ![](http://nicole.pizza/img/grow_slow-11days.gif)
-*11 days of @grow_slow*</p>
 
 This is a guide to making your own version of [@grow_slow](http://twitter.com/grow_slow), which tweets a photo of a plant once a day. Of course, you can use this to do whatever you want — **these instructions will cover the technical aspects of using a Raspberry Pi to take a photo with a webcam and tweet it once a day**. This is written to be understandable for people who might not have a lot of experience with coding, or with Raspberry Pi. You can read more about [@grow_slow](http://twitter.com/grow_slow) [here](http://nicole.pizza/grow_slow).
 
