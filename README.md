@@ -8,7 +8,7 @@ This is a guide to making your own version of [@grow_slow](http://twitter.com/gr
 
 * Raspberry Pi
 * Wifi module (might be included with your Pi)
-* USB Webcam
+* USB Webcam**
 * a plant
 * External monitor*
 * External keyboard*
@@ -16,6 +16,7 @@ This is a guide to making your own version of [@grow_slow](http://twitter.com/gr
 * HDMI cable*
 
 *if it's your first time using a Pi, you should use these things, but they're not required
+**note that this guide is for using a USB webcam - if you are using a Raspberry Pi camera module, the webcam instructions are not covered here
 
 ##1. Setting up your Pi
 
@@ -48,6 +49,18 @@ You should get something formatted like "Wed 6 Jun 20:11:24 EDT 2016." And if it
 `tzselect`
 
 and follow the instructions to set your timezone. Once you've done it you can confirm by entering `date` again and it should be correct.
+
+##3. Set up the webcam
+
+In order to get the webcam working with the Pi, we're going to install a package called `fswebcam`:
+
+`sudo apt-get install fswebcam`
+
+With the USB camera plugged in, we can very easily take photos via the command line:
+
+`fswebcam test.jpg`
+
+
 
 
 
