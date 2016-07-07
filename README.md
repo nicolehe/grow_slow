@@ -10,15 +10,15 @@ This is a guide to making your own version of [@grow_slow](http://twitter.com/gr
 
 * Raspberry Pi
 * Wifi module (might be included with your Pi)
-* USB Webcam**
+* USB Webcam^^
 * a plant
-* External monitor*
-* External keyboard*
-* External USB mouse*
-* HDMI cable*
+* External monitor^
+* External keyboard^
+* External USB mouse^
+* HDMI cable^
 
-*if it's your first time using a Pi, you should use these things, but they're not required
-**note that this guide is for using a USB webcam - if you are using a Raspberry Pi camera module, the webcam instructions are not covered here
+^if it's your first time using a Pi, you should use these things, but they're not required
+^^note that this guide is for using a USB webcam - if you are using a Raspberry Pi camera module, the webcam instructions are not covered here
 
 ##1. Setting up your Pi
 
@@ -66,13 +66,27 @@ Now, if you click on File Manager, you'll see that in your /home/pi directory, y
 
 ![](images/test.jpg)
 
+##4. Setting up Twitter and Twython
 
+If you haven't already, make a Twitter account for your little plant bot. Then, go to https://apps.twitter.com, click "key and access tokens," and generate them. If you're doing this with your Pi connected to a monitor, it's probably easiest to do it through the Pi's web browser. 
 
+In Terminal, run these commands to install the Python package we need to tweet, called Twython:
 
+```sudo apt-get install python-setuptools
+sudo easy_install pip
+sudo pip install twython```
 
+##5. Making the Python script
 
+Now we are going to write the script that will actually run once a day and tweet our photo. It's the one in this repository called [python.py](https://github.com/nicolehe/grow_slow/blob/master/photo.py)
 
+Probably the easiest way to do that is to copy that script, and paste it into a file on your own Pi. Go to [raw script URL](https://raw.githubusercontent.com/nicolehe/grow_slow/master/photo.py), and copy it.
 
+Then, in Terminal, make your own file called "photo.py":
+
+`nano photo.py`
+
+This will open a text editor called nano inside the command line. Paste the script in.
 
 
 
