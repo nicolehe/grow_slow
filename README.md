@@ -62,7 +62,7 @@ With the USB camera plugged in, we can very easily take photos via the command l
 
 Now, if you click on File Manager, you'll see that in your /home/pi directory, you have a file called test.jpg:
 
-[](https://raw.githubusercontent.com/nicolehe/grow_slow/master/images/test.jpg)
+![](images/test.jpg)
 
 
 
