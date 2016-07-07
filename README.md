@@ -72,9 +72,9 @@ If you haven't already, make a Twitter account for your little plant bot. Then, 
 
 In Terminal, run these commands to install the Python package we need to tweet, called Twython:
 
-```sudo apt-get install python-setuptools
-sudo easy_install pip
-sudo pip install twython```
+`sudo apt-get install python-setuptools`
+`sudo easy_install pip`
+`sudo pip install twython`
 
 ##5. Making the Python script
 
@@ -87,6 +87,17 @@ Then, in Terminal, make your own file called "photo.py":
 `nano photo.py`
 
 This will open a text editor called nano inside the command line. Paste the script in.
+
+This script is written in the programming language Python, and every line with a # in front of it is a comment, which means that it'll be ignored by the computer. 
+
+There should be lines that look like this in the code you just pasted:
+
+```python
+CONSUMER_KEY = 'your consumer key here'
+CONSUMER_SECRET = 'your consumer secret here'
+ACCESS_KEY = 'your access key here'
+ACCESS_SECRET = 'your access secret here'
+```
 
 
 
