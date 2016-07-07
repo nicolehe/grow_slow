@@ -2,7 +2,7 @@ Note: this is in-progress....check back later
 
 #@grow_slow
 
-This is a guide to making your own version of [@grow_slow](http://twitter.com/grow_slow), which tweets a photo of a plant once a day. Of course, you can use this to do whatever you want — *these instructions will cover the technical aspects of using a Raspberry Pi to take a photo with a webcam and tweet it once a day*. This is meant to be useful for people who might not have a lot of experience with coding, or with Raspberry Pi. You can read more about [@grow_slow](http://twitter.com/grow_slow) [here](http://nicole.pizza/grow_slow).
+This is a guide to making your own version of [@grow_slow](http://twitter.com/grow_slow), which tweets a photo of a plant once a day. Of course, you can use this to do whatever you want — **these instructions will cover the technical aspects of using a Raspberry Pi to take a photo with a webcam and tweet it once a day**. This is meant to be useful for people who might not have a lot of experience with coding, or with Raspberry Pi. You can read more about [@grow_slow](http://twitter.com/grow_slow) [here](http://nicole.pizza/grow_slow).
 
 ##Things You Need
 
@@ -36,6 +36,18 @@ What SSH allows is for you to control your Raspberry Pi from another computer, w
 Now that your Pi is up and running, open the Terminal from the toolbar at the top, or log in via SSH. You should see something that looks like this:
 
 `pi@raspberrypi ~ $`
+
+We're going to set the date so that our Pi is on the right time.
+
+Type this in and press enter:
+
+`date`
+
+You should get something formatted like "Wed 6 Jun 20:11:24 EDT 2016." And if it's correct, then hooray, you don't have to do anything else. If it's not, enter:
+
+`tzselect`
+
+and follow the instructions to set your timezone. Once you've done it you can confirm by entering `date` again and it should be correct.
 
 
 
