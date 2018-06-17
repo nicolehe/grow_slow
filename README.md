@@ -1,10 +1,10 @@
-#@grow_slow
-<p align="center">
+# @grow_slow
+
 ![](http://nicole.pizza/img/grow_slow-11days.gif)
 
 This is a guide to making your own version of [@grow_slow](http://twitter.com/grow_slow), which tweets a photo of a plant once a day. Of course, you can use this to do whatever you want — **these instructions will cover the technical aspects of using a Raspberry Pi to take a photo with a webcam and tweet it once a day**. This is written to be understandable for people who might not have a lot of experience with coding, or with Raspberry Pi. You can read more about [@grow_slow](http://twitter.com/grow_slow) [here](http://nicole.pizza/grow_slow).
 
-##Things You Need
+## Things You Need
 
 * Raspberry Pi
 * Wifi module (might be included with your Pi)
@@ -19,7 +19,7 @@ This is a guide to making your own version of [@grow_slow](http://twitter.com/gr
 
 ^^note that this guide is for using a USB webcam - if you are using a Raspberry Pi camera module, the webcam instructions are not covered here
 
-##1. Setting up your Pi
+## 1. Setting up your Pi
 
 A Raspberry Pi is a tiny computer that can do many things. They're nice because you can just leave them running somewhere in your house, and whatever weird art project you're doing won't rely on your own computer being open or connected.
 
@@ -33,7 +33,7 @@ Especially if it's your first time, it's nice and easy to be able to plug your P
 
 What SSH allows is for you to control your Raspberry Pi from another computer, which is much more convenient. However, you'll be running things entirely from your [command line](https://en.wikipedia.org/wiki/Command-line_interface) (Terminal on a Mac, or Command Prompt on a PC). If you don't have much or any experience with it, it can be a little confusing, but this can be good practice. If you are comfortable with the command line, it's highly recommended that you set up SSH. [You can follow this guide to do so](https://www.raspberrypi.org/documentation/remote-access/ssh/). 
 
-##2. Setting the date
+## 2. Setting the date
 
 Now that your Pi is up and running, open the Terminal from the toolbar at the top, or log in via SSH. You should see something that looks like this:
 
@@ -65,7 +65,7 @@ Now, if you click on File Manager, you'll see that in your /home/pi directory, y
 
 ![](images/test.jpg)
 
-##4. Setting up Twitter and Twython
+## 4. Setting up Twitter and Twython
 
 If you haven't already, make a Twitter account for your little plant bot. Then, go to https://apps.twitter.com, click "key and access tokens," and generate them. If you're doing this with your Pi connected to a monitor, it's probably easiest to do it through the Pi's web browser. 
 
@@ -77,7 +77,7 @@ sudo easy_install pip
 sudo pip install twython
 ```
 
-##5. Making the Python script
+## 5. Making the Python script
 
 Now we are going to write the script that will actually run once a day and tweet our photo. It's the one in this repository called [grow_slow.py](https://github.com/nicolehe/grow_slow/blob/master/grow_slow.py)
 
@@ -107,7 +107,7 @@ Now, we should be ready to try to tweet! Run:
 
 Go to your Twitter account and check — if all went well, it should have tweeted a photo from your webcam.
 
-##6. Make it cron
+## 6. Make it cron
 
 Now that we got the Pi to take a photo and tweet it (woohoo!), we want to schedule it so that it runs once a day at the same time. Remember how we set the correct time for our Pi? This is why.
 
@@ -160,7 +160,7 @@ Hit ctrl + x to save and quit. Now, open up your crontab again with `crontab -e`
 
 This sets it to reboot at 10:00 am every morning.
 
-##7. Position your webcam, and then do whatever you want
+## 7. Position your webcam, and then do whatever you want
 
 Maybe the hardest part of this whole thing is finding a good place to put your webcam so that it captures your plant properly. You'll probably have to take a bunch of test photos to figure out the ideal position.
 
